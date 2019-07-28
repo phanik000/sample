@@ -1,0 +1,25 @@
+package signin.tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.baseclass.BaseClass;
+import companysetup.pages.Deaprtments;
+import signin.pages.SignIn;
+
+public class VerifySignIn extends BaseClass{
+	public String expectedSignpage = "Checkmark Canada Cloud Payroll | Dashboard";
+	public SignIn sign;
+	public Deaprtments dept;
+	
+	
+	@Test(priority=1)
+	public void VerifySigninpage() {
+		
+		String dashboardTitle = driver.getTitle();
+		Assert.assertEquals(expectedSignpage, dashboardTitle);
+		System.out.println("the title after signin is: "+dashboardTitle);
+System.out.println("hii");
+	}	
+	
+}

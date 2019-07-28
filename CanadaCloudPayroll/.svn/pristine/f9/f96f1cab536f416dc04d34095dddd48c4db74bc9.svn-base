@@ -1,0 +1,95 @@
+package companysetup.pages;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+
+import com.baseclass.BaseClass;
+
+public class OtherDeductions extends BaseClass {
+public OtherDeductions(WebDriver ldriver) {
+	this.driver=ldriver;
+}
+@FindBy(xpath = "(//*[@class='hasSubmenu'])[1]")
+@CacheLookup
+public WebElement companysetupclick;
+
+@FindBy(xpath="//*[@href=\"/CanadaCloudPayroll/OtherDeductions\"]")
+@CacheLookup
+public WebElement otherdeductionsclick;
+
+
+@FindBy(xpath = "//*[@id='btnAddFromListDeduction']")
+@CacheLookup
+public WebElement addfromlistBtn;
+
+
+
+@FindBy(xpath = "//*[@id='dropDeductionPopUpList']")
+@CacheLookup
+public WebElement selectfromlist;
+
+@FindBy(xpath = "//*[@id='LoadIncomeList']")
+@CacheLookup
+public WebElement addfromlist;
+
+
+//confirm pop-up
+@FindBy(xpath="//*[@class='confirm']")
+@CacheLookup
+public WebElement confirmBtn;
+
+
+
+public void companySetupClick() {
+	companysetupclick.click();
+}
+
+public void clickOtherDeductions() {
+	otherdeductionsclick.click();
+
+}
+
+public void addFromListBtn() {
+	addfromlistBtn.click();
+}
+
+public void selectFromList() {
+selectfromlist.click();
+selectfromlist.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+
+}
+
+public void addList() {
+	addfromlist.click();
+}
+
+public void confirmbtnclick() {
+	confirmBtn.click();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

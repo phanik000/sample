@@ -1,0 +1,159 @@
+package companysetup.pages;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+
+import com.baseclass.BaseClass;
+
+public class AdditionalIncome extends BaseClass{
+	
+	
+public AdditionalIncome(WebDriver ldriver) {
+	this.driver=ldriver;
+}
+@FindBy(xpath = "(//*[@class='hasSubmenu'])[1]")
+@CacheLookup
+public WebElement companysetupclick;
+
+@FindBy(xpath="//*[@href=\"/CanadaCloudPayroll/AdditionalIncome\"]")
+@CacheLookup
+public WebElement additionalincomeclick;
+
+@FindBy(xpath = "//*[@id='btnIncomeAddFromList']")
+@CacheLookup
+public WebElement addfromlistBtn;
+
+@FindBy(xpath = "//*[@id='dropIncomePopUpList']")
+@CacheLookup
+public WebElement selectfromlist;
+
+@FindBy(xpath = "//*[@id='LoadIncomeList']")
+@CacheLookup
+public WebElement addfromlist;
+
+
+//calculation method for categories
+
+
+@FindBy(xpath="//*[@id='btnIncomeEditSelected']")
+@CacheLookup
+public WebElement editselecedBtn;
+
+@FindBy(xpath="//*[@id='txtEditIncomeName']")
+@CacheLookup
+public WebElement entercategorytext;
+
+@FindBy(xpath="//*[@id='Variable Amount']")
+@CacheLookup
+public WebElement variableamountclick;
+
+
+//fixed amount related elements
+@FindBy(xpath="//*[@id='Fixed Amount']")
+@CacheLookup
+public WebElement fixedamountclick;
+
+@FindBy(xpath="//*[@id='2T_E2']")
+@CacheLookup
+public WebElement fixedamountentertext;
+
+@FindBy(xpath="//*[@id='2--2']")
+@CacheLookup
+public WebElement fixedamountselectperiod;
+
+
+
+
+//fixed percent of sales related elements
+@FindBy(xpath="//*[@id='Fixed % Of Sales']")
+@CacheLookup
+public WebElement fixedpercentsalesclick;
+
+@FindBy(xpath="//*[@id='3T_E3']")
+@CacheLookup
+public WebElement fixedpercentofsalesentertext;
+
+
+//mileage related elements
+
+@FindBy(xpath="//*[@id='Mileage Amount Per Mile']")
+@CacheLookup
+public WebElement mileageclick;
+
+@FindBy(xpath="//*[@id='4T_E4']")
+@CacheLookup
+public WebElement mileagetextenter;
+
+
+
+//piece of work related elements
+@FindBy(xpath="//*[@id='Piecework']")
+@CacheLookup
+public WebElement pieceworkclick;
+
+@FindBy(xpath="//*[@id='5T_E5']")
+@CacheLookup
+public WebElement pieceworktextenter;
+
+
+
+
+
+
+
+
+
+
+//confirm pop-up
+@FindBy(xpath="//*[@class='confirm']")
+@CacheLookup
+public WebElement confirmBtn;
+
+
+
+public void companySetupClick() {
+	companysetupclick.click();
+}
+
+public void clickAdditionalncome() {
+	additionalincomeclick.click();
+
+}
+
+public void addFromListBtn() {
+	addfromlistBtn.click();
+}
+
+public void selectFromList() {
+selectfromlist.click();
+selectfromlist.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+
+
+}
+
+public void addList() {
+	addfromlist.click();
+}
+
+public void confirmbtnclick() {
+	confirmBtn.click();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

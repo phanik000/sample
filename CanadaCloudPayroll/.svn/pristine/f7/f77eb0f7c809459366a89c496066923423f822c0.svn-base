@@ -1,0 +1,71 @@
+package companysetup.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+
+import com.baseclass.BaseClass;
+import com.utilities.ObjectRepository;
+import com.utilities.UtilsReuse;
+
+public class Deaprtments extends BaseClass {
+	UtilsReuse util = new UtilsReuse();
+
+	public Deaprtments(WebDriver ldriver) {
+		this.driver = ldriver;
+	}
+
+	@FindBy(xpath = ObjectRepository.companysetupclick)
+	@CacheLookup
+	public WebElement companysetupclick;
+
+	@FindBy(xpath = ObjectRepository.departmentsclick)
+	@CacheLookup
+	public WebElement departmentsclick;
+
+	@FindBy(xpath = ObjectRepository.addnewdepartmentsclick)
+	@CacheLookup
+	public WebElement addnewdepartmentsclick;
+
+	@FindBy(xpath = ObjectRepository.enterdepartmentName)
+	@CacheLookup
+	public WebElement enterdepartmentName;
+
+	@FindBy(xpath = ObjectRepository.departmentsaveBtn)
+	@CacheLookup
+	public WebElement departmentsaveBtn;
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void companySetupClick() {
+		companysetupclick.click();
+	}
+
+	public void departmentClick() {
+		departmentsclick.click();
+		String dept = driver.getTitle();
+		System.out.println("the department title is: " + dept);
+	}
+
+	public void addNewDepartment() {
+		addnewdepartmentsclick.click();
+
+	}
+
+	public void enterDepartmentName(String deptname) {
+		enterdepartmentName.sendKeys(deptname);
+	}
+
+	public void saveDepartment() {
+		departmentsaveBtn.click();
+	}
+
+}

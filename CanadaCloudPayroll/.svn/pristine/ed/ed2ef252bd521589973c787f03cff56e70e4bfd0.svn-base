@@ -1,0 +1,60 @@
+package companysetup.tests;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.baseclass.BaseClass;
+import com.relevantcodes.extentreports.LogStatus;
+import com.utilities.ExcelUtil;
+
+import companysetup.pages.Deaprtments;
+import signin.pages.SignIn;
+
+public class VerifyDeaprtments extends BaseClass {
+public Deaprtments dept; 
+public SignIn sign;
+public ExcelUtil excel=new ExcelUtil();
+String expectedtitle="Checkmark Canada Cloud Payroll | Departments";
+  @Test(priority=1)
+  public void verifySignIn() {
+	try {
+		test = report.startTest("Verify to signin Test");
+		test.log(LogStatus.INFO, "Test Started" + test.getStartedTime());
+		sign=PageFactory.initElements(driver, SignIn.class);
+		sign.enterEmailID(userid);
+		sign.enterPassword(pwd);
+		sign.clickSigninBtn();
+		String dashboardTitle = driver.getTitle();
+		System.out.println("After signin page title is: "+dashboardTitle);
+	} catch (Exception e) {
+System.out.println("the verify signin exception is: "+e.getMessage());
+	}
+
+	
+}
+
+	@Test(priority=2)
+	public void verifyToAddDepartments() {
+		try {
+			test = report.startTest("Verify to AddDepartments Test");
+			test.log(LogStatus.INFO, "Test Started" + test.getStartedTime());
+
+			dept = PageFactory.initElements(driver, Deaprtments.class);
+			dept.companySetupClick();
+			dept.departmentClick();
+			Assert.assertEquals(driver.getTitle(), expectedtitle);
+			Thread.sleep(5000);
+			dept.addNewDepartment();
+			Thread.sleep(5000);
+
+		String deptname=excel.getCellData(System.getProperty("user.dir") + "./ExcelFiles/PayrollData.xlsx", "departments", 1, 0);
+			dept.enterDepartmentName(deptname);
+			Thread.sleep(5000);
+dept.saveDepartment();
+Thread.sleep(3000);
+		} catch (Exception e) {
+			System.out.println("add dept exception is: "+e);
+		}
+	}
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="15697" started-at="2019-07-18T11:13:47Z" finished-at="2019-07-18T11:14:02Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="15697" started-at="2019-07-18T11:13:47Z" finished-at="2019-07-18T11:14:02Z">
+      <class name="signin.tests.VerifySignIn">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:signin.tests.VerifySignIn@6eebc39e]" name="reportSetup" is-config="true" duration-ms="189" started-at="2019-07-18T11:13:47Z" finished-at="2019-07-18T11:13:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportSetup -->
+        <test-method status="PASS" signature="baseSetup(java.lang.String)[pri:0, instance:signin.tests.VerifySignIn@6eebc39e]" name="baseSetup" is-config="true" duration-ms="15035" started-at="2019-07-18T11:13:47Z" finished-at="2019-07-18T11:14:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseSetup -->
+        <test-method status="PASS" signature="VerifySigninpage()[pri:1, instance:signin.tests.VerifySignIn@6eebc39e]" name="VerifySigninpage" duration-ms="10" started-at="2019-07-18T11:14:02Z" finished-at="2019-07-18T11:14:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySigninpage -->
+        <test-method status="PASS" signature="getReport(org.testng.ITestResult)[pri:0, instance:signin.tests.VerifySignIn@6eebc39e]" name="getReport" is-config="true" duration-ms="3" started-at="2019-07-18T11:14:02Z" finished-at="2019-07-18T11:14:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifySigninpage status=SUCCESS method=VerifySignIn.VerifySigninpage()[pri:1, instance:signin.tests.VerifySignIn@6eebc39e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getReport -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:signin.tests.VerifySignIn@6eebc39e]" name="tearDown" is-config="true" duration-ms="57" started-at="2019-07-18T11:14:02Z" finished-at="2019-07-18T11:14:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:signin.tests.VerifySignIn@6eebc39e]" name="endTest" is-config="true" duration-ms="386" started-at="2019-07-18T11:14:02Z" finished-at="2019-07-18T11:14:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- signin.tests.VerifySignIn -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

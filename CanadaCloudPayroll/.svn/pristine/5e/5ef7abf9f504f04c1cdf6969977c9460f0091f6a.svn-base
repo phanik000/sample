@@ -1,0 +1,8 @@
+baseURL=http://f6e22f9039d74193a760a0c72852434d.cloudapp.net/CanadaCloudPayroll
+username=cmi.phanikumar@gmail.com
+password=Ch3ckMark!
+chromepath=./Drivers\\chromedriver.exe
+iepath=./Drivers\\IEDriverServer.exe
+firefoxpath=./Drivers\\geckodriver.exe
+excelpath=./ExcelFiles\\CalculateTaxValues.xlsx
+departmentname=test

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+			<!-- <class name="signin.tests.VerifySignIn"/> 
+			<class name="companysetup.tests.VerifyCompanyInformation"/> 
+				<class name="companysetup.tests.VerifyDeaprtments"/>
+				 <class name="companysetup.tests.VerifyOtherDeductions"/> 
+				 			<class name="companysetup.tests.VerifyAdditionalIncome" />-->
+				 
+				<class name="companysetup.tests.VerifyLedgerAccounts"/> 
+
+
+
+
+
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
